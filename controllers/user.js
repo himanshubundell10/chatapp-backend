@@ -25,7 +25,7 @@ export const newUser = TryCatch(async (req, res,next) => {
 
   const user = await User.create({ name, username, password, bio, avatar });
 
-  sendToken(res, user, 201, "User Created");
+  sendToken(res, user, 201, `Welcome ${user.name}`);
 });
 
 // login user and save token in cookie
