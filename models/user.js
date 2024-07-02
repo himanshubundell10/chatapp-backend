@@ -28,6 +28,7 @@ const schema = new mongoose.Schema({
   },
   bio:{
     type:String,
+    require: true,
   }
 },{
     timestamps:true,
